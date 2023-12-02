@@ -1,0 +1,40 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let imagen of imagenes; let i = index" [class.active]="i === 0">
+      <img [src]="imagen" class="d-block w-100" alt="...">
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <div class="card-container" *ngFor="let establecimiento of Establecimientos">
+    <mat-card  class="card" *ngFor="let producto of establecimiento.productos">
+      <mat-card-header>
+        <div mat-card-avatar>
+          <img src="">
+        </div>
+        <!-- <img src="data:image/jpeg;base64,''{{establecimiento.IdEmpresaNavigation.logo}}''" mat-card-avatar /> -->
+        <mat-card-title class="mat-card-title">{{establecimiento.nombreComercial}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-title class="mat-card-title">{{producto.nombre}}</mat-card-title>
+      <mat-card-subtitle class="mat-card-subtitle">Precio: {{ producto.pcosto}}</mat-card-subtitle>
+      <mat-card-actions align="end">
+        <button mat-flat-button color="primary" (click) = "openDialog('1500ms', '1500ms')">Ver</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

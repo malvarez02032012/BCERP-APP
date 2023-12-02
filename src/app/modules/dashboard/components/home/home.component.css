@@ -1,0 +1,55 @@
+/* app.component.css */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Puedes ajustar esto según tus necesidades */
+}
+
+.card {
+  width: 300px; /* Ancho deseado para cada tarjeta */
+  margin: 10px; /* Márgenes entre las tarjetas */
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.418), 0 8px 8px 0 rgba(0,0,0,.14), 0 8px 8px 0 rgba(0,0,0,.12) !important;
+  transform: translate3d(0,0,0);
+  transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+}
+
+.mat-card-actions-align-button {
+  align-content:flex-end ;
+}
+
+.mat-card-content-custom {
+  height: 50px; /* Ajusta el valor según tus necesidades */
+}
+
+.mat-card-title {
+  text-align: center;
+  font-size: .9em;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+.mat-card-subtitle {
+  text-align: center;
+  color: #111;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mat-card:hover {
+  /* Cambia el color de fondo al pasar el ratón */
+  background-color: #e0e0e0;
+  /* Agrega una transición suave para un cambio suave */
+  transition: background-color 0.3s ease-in-out;
+  /* Puedes agregar otros estilos como sombras, escalas, etc. */
+}
+
+.mat-card:hover img {
+  /* Cambia las propiedades de las imágenes dentro de mat-card al pasar el ratón */
+  transform: scale(1.1);
+  /* Agrega una transición suave para un cambio suave */
+  transition: transform 0.3s ease-in-out;
+}
+
+.selected-card {
+
+}
