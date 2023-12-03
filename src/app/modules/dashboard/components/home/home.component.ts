@@ -19,8 +19,7 @@ import { ProductoDetalleComponent } from 'src/app/modules/productos/producto-det
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  standalone: true,
-  imports: [NgFor, MatCardModule, MatButtonModule],
+  // imports: [NgFor, MatCardModule, MatButtonModule],
 })
 export class HomeComponent implements OnInit {
 
